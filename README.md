@@ -12,7 +12,7 @@ Welcome to my personal portfolio website! This project showcases my educational 
 ## 📁 Project Structure
 
 ```
-n.html         # Main HTML file for the portfolio
+index.html         # Main HTML file for the portfolio
 style.css      # External stylesheet (linked in HTML if separated)
 ```
 
