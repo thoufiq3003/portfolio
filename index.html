@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about, .skills, .contact,.Education,.project, .certification,.language {
+  background-color: white;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+/* Zoom effect on hover */
+.about:hover,
+.skills:hover,
+.contact:hover,
+.Education:hover,
+.certification:hover,
+.language:hover,
+.project:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* Smooth transition for all content sections */
+.about,
+.skills,
+.Education,
+.project,
+.certification,
+.language,
+.contact {
+  transition: transform 0.3s ease;
+}
+
+</style>
+<body>
+  <header>
+    <div class="container">
+      <h1>Mohamed Thoufiq</h1>
+      <p>Aspiring Web Developer</p>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+       I am a motivated and enthusiastic fresher with a basic knowledge of web development. I havebuilt simple web pages and websites using HTML, CSS, and JavaScript, and I’m excited to learnmore and grow my skills. I’m eager to find opportunities where I can contribute and developprofessionally in a supportive environment.
+      </p>
+    </div>
+  </section>
+  <section class="Education">
+    <div class="container">
+        <h2>Education</h2>
+        <pre>
+           <b>B.Tech(Information Technology) </b>    2022-2026
+           Rajiv Gandhi College of Engineering and Technology, 
+           Puducherry - 607403.
+           CGPA:<B>7.8</B>
+           
+           <b>HSC</b>     2022
+           St.Joseph's Higher Secondary School, 
+           Cuddalore - Manjakuppam.
+           Percentage: <b>56%</b>
+
+           <b>SSLC</b>    2022
+           Lakshmi Matriculation School, 
+           Cuddalore - OT.
+           Percentage: <b>68%</b>
+        </pre>
+         </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>  
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>My SQL</li>
+        <li>Canva</li>
+      </ul>
+    </div>
+  </section>
+  <section class="project">
+    <div class="container">
+    <h2>Projects</h2>
+    <pre>
+    Project Title :<b> Urban Terrace Gardening Web Portal</b>
+    Description : <b>The Urban Gardening Web Portal</b> is designed to empowerindividuals living in urban environments 
+    to grow their own plants—such as vegetables, fruits,and flowers—on their rooftops, balconies, or terraces.</pre>
+    </div>
+  </section>
+  <section class="certification">
+    <div class="container">
+      <h2>Certification</h2>
+      <ul>
+        <li>Full Stack Development in Java.(Edusphere Solution)   -  Currently in progress.</li>
+        <li>Basics in Python.(MSME POndicherry)</li>
+        <pre><b>Spoken Tutotial in IIT Bombay</b></pre>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>PHP and My SQL</li>
+      </ul>
+    </div>
+  </section>
+ <section  class="language">
+    <div class="container">
+        <h2>Languages</h2>
+        <ul>
+            <li>Tamil</li>
+            <li>English</li>
+            
+        </ul>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: thoufiq6588@gmail.com</p>
+      <p>Phone: +91-9025030722  </p>
+    </div>
+  </section>
+ 
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mohamed Thoufiq. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
