@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamed Thoufiq Portfolio</title>
+  <style>
+    #mt-top-btn {
+      display: none;
+    }
+    #mt-top-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.2em;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      cursor: pointer;
+      z-index: 1001;
+      transition: background 0.2s;
+    }
+    #mt-top-btn:hover {
+      background: #357abd;
+    }
+      nav {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      nav .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Segoe UI", sans-serif;
+    }
+    div {
+      transition: transform 0.3s ease;
+      padding: 18px 12px;
+      font-size: 1.08em;
+    }
+    div:hover {
+      transform: scale(1.04);
+    }
+      .about-image img {
+        border-radius: 30px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      }
+      .about-image img:hover {
+        transform: scale(1.12);
+      }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4a90e2;
+    }
+
+    .download-btn {
+      padding: 8px 16px;
+      background-color: white;
+      color: #4a90e2;
+      border: 2px solid #4a90e2;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #4a90e2;
+      color: white;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    section {
+      background-color: white;
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      animation: slideIn 0.6s ease forwards;
+    }
+
+    section:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    b {
+      color: #222;
+    }
+
+    .education-entry, .project-description {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        width: 98%;
+        padding: 8px 0;
+      }
+      section {
+        padding: 10px;
+        margin: 12px 0;
+      }
+      nav .container {
+        flex-direction: column;
+        gap: 8px;
+      }
+      nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+      }
+      .download-btn {
+        padding: 5px 10px;
+        font-size: 0.98em;
+      }
+      .about-image img {
+        width: 140px !important;
+        height: 140px !important;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+      .about-image {
+        flex: unset !important;
+        text-align: center !important;
+        margin-bottom: 8px;
+      }
+      .container[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      h2 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+      }
+      p, ul, li, b {
+        font-size: 0.98em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 100%;
+        padding: 8px 0;
+      }
+      section {
+        padding: 10px 6px;
+        margin: 12px 0;
+      }
+      h2 {
+        font-size: 0.95em;
+        margin-bottom: 10px;
+      }
+      p, ul, li, b {
+        font-size: 0.88em;
+        line-height: 1.5;
+        margin-bottom: 8px;
+      }
+      .about-image img {
+        width: 40vw !important;
+        max-width: 140px !important;
+        height: auto !important;
+        aspect-ratio: 1/1;
+        display: block;
+        margin: 10px auto 10px auto;
+      }
+      .about-image {
+        flex: unset !important;
+        text-align: center !important;
+        margin-bottom: 10px;
+      }
+      .container[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      .download-btn {
+        padding: 4px 8px;
+        font-size: 0.88em;
+        margin-bottom: 10px;
+      }
+      nav ul {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 4px !important;
+        justify-content: center !important;
+        padding: 0 2px !important;
+      }
+      nav ul li {
+        font-size: 0.85em !important;
+        padding: 2px 4px !important;
+      }
+      nav a {
+        font-size: 0.85em !important;
+        padding: 2px 4px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="mt-top-btn" title="Go to top">MT</button>
+  <header>
+    <div class="container">
+      <h1>Mohamed Thoufiq</h1>
+      <p>Aspiring Web Developer</p><br> 
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <section id="about">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div style="flex: 1;">
+        <h2>About Me</h2>
+        <p>
+          I am a motivated and enthusiastic fresher with a basic knowledge of web development. 
+          I have built simple web pages and websites using HTML, CSS, and JavaScript, and I’m excited to learn more and grow my skills. 
+          I’m eager to find opportunities where I can contribute and develop professionally in a supportive environment.
+          <br></br>
+          <center><a href="resume.pdf" class="download-btn" download>Download Resume</a></center>
+        </p>
+      </div>
+      <div class="about-image" style="flex: 0 0 300px; text-align: right;">
+    <img src="tho2.jpg" alt="My Photo" style="width:280px; height:280px; object-fit:cover;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-entry">
+        <b>B.Tech (Information Technology)</b> (2022 - 2026)<br>
+        Rajiv Gandhi College of Engineering and Technology, Puducherry - 607403.<br>
+        CGPA: <b>7.8</b>
+      </div>
+      <div class="education-entry">
+        <b>HSC</b> (2022)<br>
+        St. Joseph's Higher Secondary School, Cuddalore - Manjakuppam.<br>
+        Percentage: <b>56%</b>
+      </div>
+      <div class="education-entry">
+        <b>SSLC</b> (2022)<br>
+        Lakshmi Matriculation School, Cuddalore - OT.<br>
+        Percentage: <b>68%</b>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>Canva</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-description">
+        <b>Project Title:</b> Urban Terrace Gardening Web Portal<br>
+        <b>Description:</b> The Urban Gardening Web Portal is designed to empower individuals living in urban environments to grow their own plants—such as vegetables, fruits, and flowers—on their rooftops, balconies, or terraces.
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: thoufiq6588@gmail.com</p>
+      <p>Phone: +91-9025030722</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mohamed Thoufiq. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+  const mtBtn = document.getElementById('mt-top-btn');
+  mtBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      mtBtn.style.display = 'block';
+    } else {
+      mtBtn.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
